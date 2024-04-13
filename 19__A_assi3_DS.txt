@@ -1,0 +1,165 @@
+1. Write a program to insert element into the stack and display the element.
+
+/* Name: Nehal Ravaliya \n
+  Roll no: 19 \n
+  class :A \n\n\n
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 4
+
+int top = -1, inp_array[SIZE];
+
+void push() {
+    int x;
+
+    if (top == SIZE - 1) {
+     printf("Name:Nehal Ravaliya \n Roll no:19 \n class:A\n\n\n");
+        printf("\nOverflow!!");
+    } else {
+        printf("\nEnter the element to be added onto the stack: ");
+        scanf("%d", &x);
+        top = top + 1;
+        inp_array[top] = x;
+    }
+}
+
+int main() {
+    push();
+    return 0;
+} 
+2. Write a program to delete an element into the stack and display the element.
+
+/* Name: Nehal Ravaliya \n
+  Roll no: 19 \n
+  class :A \n\n\n
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 4
+
+int top = -1, inp_array[SIZE];
+
+void pop() {
+ printf("Name:Nehal Ravaliya \n Roll no:19 \n class:A\n ");
+    if (top == -1) {
+        printf("\nUnderflow!!");
+    } else {
+        printf("\nPopped element: %d", inp_array[top]);
+	top = top - 1;
+
+    }
+}
+
+int main() {
+clrscr();
+    pop();
+    getch();
+    return 0;
+}
+ 
+
+3. Write a program to insert element into the queue and display the element.
+/* Name: Nehal Ravaliya \n
+  Roll no: 19 \n
+  class :A \n\n\n
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 100
+
+int inp_arr[SIZE];
+int Rear = -1;
+int Front = -1;
+
+void enqueue() {
+    int insert_item;
+    if (Rear == SIZE - 1)
+       printf("Overflow \n");
+    else {
+	if (Front == -1)
+	    Front = 0;
+	printf("Element to be inserted in the Queue: ");
+	scanf("%d", &insert_item);
+	 printf("Name:Nehal Ravaliya \n Roll no:19 \n class:A\n\n\n");
+	Rear = Rear + 1;
+	inp_arr[Rear] = insert_item;
+    }
+}
+
+int main() {
+    int ch;
+    while (1) {
+	printf("1.Enqueue Operation\n");
+	printf("2.Exit\n");
+	printf("Enter your choice: ");
+	scanf("%d", &ch);
+	switch (ch) {
+	    case 1:
+		enqueue();
+		break;
+	    case 2:
+		exit(0);
+	    default:
+		printf("Invalid choice \n");
+	}
+    }
+    return 0;
+} 
+ 
+4. Write a program to delete element into the queue and display the element.
+
+/*Name:Nehal Ravaliya \n
+ Roll no:19 \n
+  class:A\n\n\n*/
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#define SIZE 100
+
+int inp_arr[SIZE];
+int Rear = -1;
+int Front = -1;
+
+void dequeue() {
+	 printf("Name:Nehal Ravaliya \n Roll no:19 \n class:A\n\n\n");
+    if (Front == -1 || Front > Rear) {
+	printf("Underflow \n");
+	return;
+    } else {
+	printf("Element deleted from the Queue: %d\n", inp_arr[Front]);
+	Front = Front + 1;
+    }
+}
+
+int main() {
+    int ch;
+    clrscr();
+    while (1) {
+        printf("1.Dequeue Operation\n");
+        printf("2.Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &ch);
+        switch (ch) {
+            case 1:
+                dequeue();
+                break;
+            case 2:
+                exit(0);
+            default:
+                printf("Invalid choice \n");
+        } 
+    } 
+    return 0;
+}
+ 
+
+
+
